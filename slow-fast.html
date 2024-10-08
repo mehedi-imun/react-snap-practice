@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual DOM Manipulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .container {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        min-height: 50px;
+      }
+      #loading {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manual DOM Manipulation</h1>
+    <div class="container"></div>
+
+    <script>
+      const container = document.querySelector(".container");
+      function fastUpdate() {
+        const startTime = performance.now();
+
+        let array = [];
+        for (let i = 1; i <= 10000; i++) {
+          array.push(i);
+        }
+        container.innerHTML = array.join(" ");
+        const endTime = performance.now();
+        console.log(
+          `Fast update completed in ${endTime - startTime} milliseconds.`
+        );
+      }
+
+      function slowUpdate() {
+        const startTime = performance.now();
+
+        for (let i = 1; i <= 10000; i++) {
+          container.innerHTML += " " + i;
+        }
+        const endTime = performance.now();
+        console.log(
+          `Slow update completed in ${endTime - startTime} milliseconds.`
+        );
+      }
+    //   fastUpdate()
+    //   slowUpdate();
+    </script>
+  </body>
+</html>

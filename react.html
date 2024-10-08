@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next-Level Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-image: url("img/bg.png");
+      }
+      .card-container {
+        border-radius: 20px;
+        background: linear-gradient(to right, #380546, #dd02d0);
+        padding: 2px; /* Gradient Border */
+      }
+
+      .inner-card {
+        border-radius: 18px;
+        background: #ffffff;
+        padding: 20px;
+      }
+
+      .gradient-button {
+        background: linear-gradient(90deg, #01ff8d, #290126);
+        color: #ffffff;
+        font-weight: bold;
+        transition: background 0.1s ease;
+      }
+
+      .gradient-button:hover {
+        background: linear-gradient(90deg, #3a0036, #01ff8e);
+      }
+
+      .item-text,
+      .price-text {
+        background: linear-gradient(90deg, #01ff8e, #dd02d0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="reactScript.js"></script>
+  </body>
+</html>

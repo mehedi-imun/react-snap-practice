@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next-Level Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-image: url("img/bg.png")
+      }
+
+      .card-container {
+        border-radius: 20px;
+        background: linear-gradient(to right, #380546, #DD02D0);
+        padding: 2px; /* Gradient Border */
+      }
+
+      .inner-card {
+        border-radius: 18px;
+        background: #FFFFFF;
+        padding: 20px;
+      }
+
+      .gradient-button {
+        background: linear-gradient(90deg, #01ff8d, #290126);
+        color: #FFFFFF;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .gradient-button:hover {
+        background: linear-gradient(90deg, #3a0036, #01FF8E);
+      }
+
+      .item-text, .price-text {
+        background: linear-gradient(90deg, #01FF8E, #DD02D0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+    <div class="card-container max-w-md shadow-lg">
+      <div class="inner-card text-center">
+        <h1 class="text-3xl font-extrabold text-[#380546]">Next-Level Cart 🚀</h1>
+
+        <div class="mt-5">
+          <p class="text-lg font-bold text-[#380546]">Product: Next level web development Course</p>
+          <p class="text-2xl font-bold price-text mt-2">৳ 6500</p>
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+          <button
+            id="addToCartButton"
+            class="gradient-button text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300"
+          >
+            Add to Cart
+          </button>
+          <div class="text-left">
+            <p id="itemCount" class="text-lg font-bold item-text">Items in Cart: 0</p>
+            <p id="totalPrice" class="text-lg font-bold item-text">Total Price: ৳ 0</p>
+          </div>
+        </div>
+
+        <div id="successMessage" class="hidden text-[#01FF8E] font-semibold text-center mt-5">
+          Item added to the cart!
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
